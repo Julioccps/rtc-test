@@ -3,10 +3,9 @@ project(ChatApp)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Caso tu use header-only ASIO baixado manualmente
-include_directories(external/asio)
 
-# Servidor
+set(CMAKE_GENERATOR_PLATFORM x64)
+
 add_executable(server src/server/server.cpp)
 set_target_properties(server PROPERTIES OUTPUT_NAME "server")
 add_executable(server_exe src/server/server.cpp)
@@ -17,7 +16,6 @@ if(UNIX)
     target_link_libraries(server_exe pthread)
 endif()
 
-# Cliente
 add_executable(client src/client/client.cpp)
 set_target_properties(client PROPERTIES OUTPUT_NAME "client")
 add_executable(client_exe src/client/client.cpp)
