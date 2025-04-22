@@ -1,0 +1,4 @@
+/home/julio/Desktop/c++/rtc/build/CMakeFiles/server.dir
+/home/julio/Desktop/c++/rtc/build/CMakeFiles/client.dir
+/home/julio/Desktop/c++/rtc/build/CMakeFiles/edit_cache.dir
+/home/julio/Desktop/c++/rtc/build/CMakeFiles/rebuild_cache.dir
