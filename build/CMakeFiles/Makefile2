@@ -64,12 +64,16 @@ CMAKE_BINARY_DIR = /home/julio/Desktop/c++/rtc/build
 
 # The main recursive "all" target.
 all: CMakeFiles/server.dir/all
+all: CMakeFiles/server_exe.dir/all
 all: CMakeFiles/client.dir/all
+all: CMakeFiles/client_exe.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/server.dir/codegen
+codegen: CMakeFiles/server_exe.dir/codegen
 codegen: CMakeFiles/client.dir/codegen
+codegen: CMakeFiles/client_exe.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -78,7 +82,9 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/server.dir/clean
+clean: CMakeFiles/server_exe.dir/clean
 clean: CMakeFiles/client.dir/clean
+clean: CMakeFiles/client_exe.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -88,7 +94,7 @@ clean: CMakeFiles/client.dir/clean
 CMakeFiles/server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=3,4 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=5,6 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,13 +111,45 @@ server: CMakeFiles/server.dir/rule
 # codegen rule for target.
 CMakeFiles/server.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=3,4 "Finished codegen for target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=5,6 "Finished codegen for target server"
 .PHONY : CMakeFiles/server.dir/codegen
 
 # clean rule for target.
 CMakeFiles/server.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
 .PHONY : CMakeFiles/server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/server_exe.dir
+
+# All Build rule for target.
+CMakeFiles/server_exe.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=7,8 "Built target server_exe"
+.PHONY : CMakeFiles/server_exe.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/server_exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/julio/Desktop/c++/rtc/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server_exe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/julio/Desktop/c++/rtc/build/CMakeFiles 0
+.PHONY : CMakeFiles/server_exe.dir/rule
+
+# Convenience name for target.
+server_exe: CMakeFiles/server_exe.dir/rule
+.PHONY : server_exe
+
+# codegen rule for target.
+CMakeFiles/server_exe.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=7,8 "Finished codegen for target server_exe"
+.PHONY : CMakeFiles/server_exe.dir/codegen
+
+# clean rule for target.
+CMakeFiles/server_exe.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/clean
+.PHONY : CMakeFiles/server_exe.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/client.dir
@@ -144,6 +182,38 @@ CMakeFiles/client.dir/codegen:
 CMakeFiles/client.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/clean
 .PHONY : CMakeFiles/client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/client_exe.dir
+
+# All Build rule for target.
+CMakeFiles/client_exe.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=3,4 "Built target client_exe"
+.PHONY : CMakeFiles/client_exe.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/client_exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/julio/Desktop/c++/rtc/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/client_exe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/julio/Desktop/c++/rtc/build/CMakeFiles 0
+.PHONY : CMakeFiles/client_exe.dir/rule
+
+# Convenience name for target.
+client_exe: CMakeFiles/client_exe.dir/rule
+.PHONY : client_exe
+
+# codegen rule for target.
+CMakeFiles/client_exe.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/julio/Desktop/c++/rtc/build/CMakeFiles --progress-num=3,4 "Finished codegen for target client_exe"
+.PHONY : CMakeFiles/client_exe.dir/codegen
+
+# clean rule for target.
+CMakeFiles/client_exe.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/clean
+.PHONY : CMakeFiles/client_exe.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

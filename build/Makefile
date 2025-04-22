@@ -130,6 +130,19 @@ server/fast:
 .PHONY : server/fast
 
 #=============================================================================
+# Target rules for targets named server_exe
+
+# Build rule for target.
+server_exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server_exe
+.PHONY : server_exe
+
+# fast build rule for target.
+server_exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/build
+.PHONY : server_exe/fast
+
+#=============================================================================
 # Target rules for targets named client
 
 # Build rule for target.
@@ -142,12 +155,26 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+#=============================================================================
+# Target rules for targets named client_exe
+
+# Build rule for target.
+client_exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_exe
+.PHONY : client_exe
+
+# fast build rule for target.
+client_exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/build
+.PHONY : client_exe/fast
+
 src/client/client.o: src/client/client.cpp.o
 .PHONY : src/client/client.o
 
 # target to build an object file
 src/client/client.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/client.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/src/client/client.cpp.o
 .PHONY : src/client/client.cpp.o
 
 src/client/client.i: src/client/client.cpp.i
@@ -156,6 +183,7 @@ src/client/client.i: src/client/client.cpp.i
 # target to preprocess a source file
 src/client/client.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/client.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/src/client/client.cpp.i
 .PHONY : src/client/client.cpp.i
 
 src/client/client.s: src/client/client.cpp.s
@@ -164,6 +192,7 @@ src/client/client.s: src/client/client.cpp.s
 # target to generate assembly for a file
 src/client/client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/client.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client_exe.dir/build.make CMakeFiles/client_exe.dir/src/client/client.cpp.s
 .PHONY : src/client/client.cpp.s
 
 src/server/server.o: src/server/server.cpp.o
@@ -172,6 +201,7 @@ src/server/server.o: src/server/server.cpp.o
 # target to build an object file
 src/server/server.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/src/server/server.cpp.o
 .PHONY : src/server/server.cpp.o
 
 src/server/server.i: src/server/server.cpp.i
@@ -180,6 +210,7 @@ src/server/server.i: src/server/server.cpp.i
 # target to preprocess a source file
 src/server/server.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/src/server/server.cpp.i
 .PHONY : src/server/server.cpp.i
 
 src/server/server.s: src/server/server.cpp.s
@@ -188,6 +219,7 @@ src/server/server.s: src/server/server.cpp.s
 # target to generate assembly for a file
 src/server/server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_exe.dir/build.make CMakeFiles/server_exe.dir/src/server/server.cpp.s
 .PHONY : src/server/server.cpp.s
 
 # Help Target
@@ -199,7 +231,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... client_exe"
 	@echo "... server"
+	@echo "... server_exe"
 	@echo "... src/client/client.o"
 	@echo "... src/client/client.i"
 	@echo "... src/client/client.s"
